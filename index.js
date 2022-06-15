@@ -5,15 +5,15 @@ let newsAccordion = document.getElementById('newsAccordion');
 
 //Create a get request
 const xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=ced71256fb8e44498571303594a04bc7&language=en', true);
+xhr.open('GET', 'http://api.mediastack.com/v1/news?access_key=fbbed0de50a7a20428ef8cd9025f8c53&countries=in', true);
 
 // What to do when response is ready
 xhr.onload = function () {
-    if (this.status == 200) {
+    if (this.status === 200) {
         let json = JSON.parse(this.responseText);
-        let articles = json.articles;
+        let data = json.data;
         let newsHtml = "";
-        articles.forEach(function(element,index){
+        data.forEach(function(element,index){
             let news = `<div class="card">
                             <div class="card-header" id="heading${index}">
                                 <h2 class="mb-0">
