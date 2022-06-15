@@ -5,7 +5,7 @@ let newsAccordion = document.getElementById('newsAccordion');
 
 //Create a get request
 const xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://newsapi.org/v2/top-headlines?country=in&apiKey=ced71256fb8e44498571303594a04bc7', true);
+xhr.open('GET', 'https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=ced71256fb8e44498571303594a04bc7', true);
 
 // What to do when response is ready
 xhr.onload = function () {
@@ -37,5 +37,4 @@ xhr.onload = function () {
         console.log("Some Error occured")
     }
 }
-
 xhr.send()
