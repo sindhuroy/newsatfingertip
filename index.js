@@ -1,7 +1,5 @@
 console.log("This is my index js");
-//ced71256fb8e44498571303594a04bc7
 
-let apiKey = 'ced71256fb8e44498571303594a04bc7'
 //Grab the news container
 let newsAccordion = document.getElementById('newsAccordion');
 
@@ -14,7 +12,6 @@ xhr.onload = function () {
     if (this.status === 200) {
         let json = JSON.parse(this.responseText);
         let articles = json.articles;
-        console.log(articles)
         let newsHtml = "";
         articles.forEach(function(element,index){
             let news = `<div class="card">
