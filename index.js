@@ -9,7 +9,7 @@ xhr.open('GET', 'https://newsapi.org/v2/top-headlines?country=in&category=scienc
 
 // What to do when response is ready
 xhr.onload = function () {
-    if (this.status === 200) {
+    if (this.status == 200) {
         let json = JSON.parse(this.responseText);
         let articles = json.articles;
         let newsHtml = "";
